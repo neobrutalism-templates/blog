@@ -11,20 +11,20 @@ export default {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        main: '#c4a1ff',
-        mainAccent: '#9e66ff', // not needed for shadcn components
+        main: '#FFDC58',
+        mainAccent: '#ffc800', // not needed for shadcn components
         overlay: 'rgba(0,0,0,0.8)', // background color overlay for alert dialogs, modals, etc.
 
         // light mode
-        bg: '#daf5f0',
+        bg: '#FEF2E8',
         text: '#000',
         border: '#000',
 
         // dark mode
-        darkBg: '#0f3730',
+        darkBg: '#374151',
         darkText: '#eeefe9',
         darkBorder: '#000',
-        secondaryBlack: '#1b1b1b', // opposite of plain white, not used pitch black because borders and box-shadows are that color
+        secondaryBlack: '#212121', // opposite of plain white, not used pitch black because borders and box-shadows are that color
       },
       borderRadius: {
         base: '10px',
