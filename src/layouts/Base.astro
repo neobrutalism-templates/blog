@@ -1,4 +1,6 @@
 ---
+import '@/global.css'
+
 import config from '@/config'
 import { ViewTransitions } from 'astro:transitions'
 
@@ -20,11 +22,11 @@ const {
     <ViewTransitions />
   </head>
   <body
-    class="mx-auto max-w-[900px] bg-bg px-5 font-base text-text scrollbar scrollbar-thumb-black dark:bg-darkBg dark:text-darkText dark:scrollbar-thumb-white"
+    class="bg-background font-base text-foreground scrollbar scrollbar-thumb-black dark:scrollbar-thumb-white mx-auto max-w-[900px] px-5"
   >
     <Nav />
     <main
-      class="min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px]"
+      class="w500:min-h-[calc(100dvh-70px)] w400:pt-[140px] min-h-[calc(100dvh-70px)] py-10 pt-[120px]"
     >
       <slot />
     </main>
@@ -42,13 +44,13 @@ const {
           document.documentElement.classList.add('dark')
           document.documentElement.setAttribute(
             'data-theme',
-            config.themes.dark as string
+            config.themes.dark as string,
           )
         } else {
           document.documentElement.classList.remove('dark')
           document.documentElement.setAttribute(
             'data-theme',
-            config.themes.light as string
+            config.themes.light as string,
           )
         }
       }

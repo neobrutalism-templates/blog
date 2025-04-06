@@ -48,7 +48,7 @@ Your post
 
 ### Styling
 
-To change the styling visit [styling docs](https://neobrutalism-components.vercel.app/docs/styling), and copy the desired styling to tailwind config like it's shown in the styling docs.
+To change the styling visit [styling docs](https://neobrutalism.dev/styling), and copy the desired styling to your css like it's shown in the styling docs.
 
 Make sure to not delete `fontFamily`, `screens`, and `typography` from tailwind config.
 
