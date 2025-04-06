@@ -1,3 +1,62 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@config '../tailwind.config.js';
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(96.22% 0.0569 95.61);
+  --secondary-background: oklch(100% 0 0);
+  --foreground: oklch(0% 0 0);
+  --main-foreground: oklch(0% 0 0);
+  --main: oklch(84.08% 0.1725 84.2);
+  --border: oklch(0% 0 0);
+  --ring: oklch(0% 0 0);
+  --overlay: oklch(0% 0 0 / 0.8);
+  --shadow: 0px 4px 0px 0px var(--border);
+}
+
+.dark {
+  --background: oklch(0.37 0.0297 256.23);
+  --secondary-background: oklch(23.93% 0 0);
+  --foreground: oklch(92.49% 0 0);
+  --main-foreground: oklch(0% 0 0);
+  --main: oklch(77.7% 0.1593880864006951 84.38427202675717);
+  --border: oklch(0% 0 0);
+  --ring: oklch(100% 0 0);
+  --shadow: 0px 4px 0px 0px var(--border);
+}
+
+@theme inline {
+  --color-main: var(--main);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-foreground: var(--foreground);
+  --color-main-foreground: var(--main-foreground);
+  --color-border: var(--border);
+  --color-overlay: var(--overlay);
+  --color-ring: var(--ring);
+
+  --spacing-boxShadowX: 0px;
+  --spacing-boxShadowY: 4px;
+  --spacing-reverseBoxShadowX: -0px;
+  --spacing-reverseBoxShadowY: -4px;
+  --radius-base: 10px;
+  --shadow-shadow: var(--shadow);
+  --font-weight-base: 500;
+  --font-weight-heading: 700;
+
+  --breakpoint-m700: max-width: 700px;
+  --breakpoint-m500: max-width: 500px;
+  --breakpoint-m400: max-width: 400px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 mark {
-  @apply bg-main;
+  background-color: var(--main);
 }

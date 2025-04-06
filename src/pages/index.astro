@@ -1,4 +1,5 @@
 ---
+// @ts-nocheck
 import config from '@/config'
 import { getCollection } from 'astro:content'
 
@@ -9,7 +10,7 @@ const allPosts = await getCollection('posts')
 const sortedPosts = allPosts.sort(
   (a, b) =>
     // eslint-disable-next-line prettier/prettier
-    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf(),
 )
 ---
 

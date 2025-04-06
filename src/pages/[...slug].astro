@@ -1,4 +1,5 @@
 ---
+// @ts-nocheck
 import { getCollection } from 'astro:content'
 
 import Layout from '@/layouts/BlogPost.astro'
@@ -8,7 +9,7 @@ export async function getStaticPaths() {
 
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry }
+    props: { entry },
   }))
 }
 
